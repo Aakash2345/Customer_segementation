@@ -6,6 +6,10 @@ import seaborn as sns
 from sklearn.cluster import DBSCAN
 import pickle
 import warnings
+from sklearn.pipeline import Pipeline
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder, FunctionTransformer
+from sklearn.decomposition import PCA
 
 warnings.filterwarnings('ignore')
 
