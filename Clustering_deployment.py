@@ -9,13 +9,13 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-data = pd.read_csv("E:\Customer seg models\pca.csv") # Preprocessed data till pca
+data = pd.read_csv("data\csv files\pca.csv") # Preprocessed data till pca
 
 # Original scale data after applying k-means 
-summary_data = pd.read_csv("E:\Customer seg models\inverse_transformed_data.csv") # data after inverse tranformation of log and scaling
+summary_data = pd.read_csv("data\csv files\inverse_transformed_data.csv") # data after inverse tranformation of log and scaling
 
 # Load the preprocess model (OneHotEncoding -> Scaling -> PCA)
-model_path1 = r'E:\Customer seg models\preprocess_model.pkl'
+model_path1 = r'models\preprocess_model.pkl'
 with open(model_path1, 'rb') as file1:
     preprocess_model = pickle.load(file1)
     
@@ -27,7 +27,7 @@ db_labels = model.fit_predict(data)
 mask = db_labels != -1
 
 # Load the K-Means model 
-model_path2 = r'E:\Customer seg models\K_means_model.pkl'
+model_path2 = r'data\models\K_means_model.pkl'
 with open(model_path2, 'rb') as file2:
     Cluster_model = pickle.load(file2)
  
