@@ -1,3 +1,10 @@
+
+# 🧠 Customer Insights & Segmentation
+
+This app visualizes data insights using Streamlit.
+
+👉 **Try it here:** [Visit my Streamlit app](https://aakashchaudhari-customer-segmentation.streamlit.app)
+
 # 🧩 Customer Segmentation using Clustering
 
 This project segments customers based on demographic and behavioral data to help businesses identify distinct user groups and improve marketing strategies.
@@ -29,9 +36,3 @@ Python • Pandas • NumPy • Scikit-learn • Matplotlib • Seaborn
 pip install -r requirements.txt
 python customer_segmentation.py
 ```
-
-# 🧠 My Data Science App
-
-This app visualizes data insights using Streamlit.
-
-👉 **Try it here:** [Visit my Streamlit app](https://aakashchaudhari-customer-segmentation.streamlit.app)
