@@ -28,6 +28,7 @@ Python • Pandas • NumPy • Scikit-learn • Matplotlib • Seaborn
 ```bash
 pip install -r requirements.txt
 python customer_segmentation.py
+```
 
 # 🧠 My Data Science App
 
