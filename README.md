@@ -1,7 +1,7 @@
 
 # 🧠 Customer Insights & Segmentation
 
-This app visualizes data insights using Streamlit.
+This Streamlit app segments customers based on their spending and behavior patterns using KMeans clustering.
 
 👉 **Try it here:** [Visit my Streamlit app](https://aakashchaudhari-customer-segmentation.streamlit.app)
 
