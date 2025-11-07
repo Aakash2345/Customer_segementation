@@ -28,3 +28,9 @@ Python • Pandas • NumPy • Scikit-learn • Matplotlib • Seaborn
 ```bash
 pip install -r requirements.txt
 python customer_segmentation.py
+
+# 🧠 My Data Science App
+
+This app visualizes data insights using Streamlit.
+
+👉 **Try it here:** [Visit my Streamlit app](https://aakashchaudhari-customer-segmentation.streamlit.app)
