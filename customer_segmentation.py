@@ -62,9 +62,9 @@ with tab0:
             col1, col2, col3, col4, col5 = st.columns(5) # Specifying 5 columns 
 
             col1.metric("Customers", f"{num_customers}")
-            col2.metric("Avg Income", f"{avg_income:.0f} units")
+            col2.metric("Avg Income", f"{avg_income:.0f} Units")
             col3.metric("Avg Age", f"{avg_age:.1f}")
-            col4.metric("Avg Spend", f"{avg_spend:.0f} (Monetary Units)")
+            col4.metric("Avg Spend", f"{avg_spend:.0f} Units")
             col5.metric("Avg Recency", f"{avg_recency:.0f} days")
 
             st.markdown("---")  # horizontal line for separation
@@ -214,4 +214,5 @@ with tab2:
             st.error("Invalid cluster result.")
     else:
         st.warning("Predict a cluster first using the Predict Cluster in Tab 1.")
+
 
