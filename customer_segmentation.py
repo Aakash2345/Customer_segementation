@@ -13,6 +13,8 @@ from sklearn.decomposition import PCA
 
 warnings.filterwarnings('ignore')
 
+st.set_page_config(layout="wide")
+
 data = pd.read_csv("data//csv files//pca.csv") # Preprocessed data till pca
 
 # Original scale data after applying k-means 
@@ -62,9 +64,9 @@ with tab0:
             col1, col2, col3, col4, col5 = st.columns(5) # Specifying 5 columns 
 
             col1.metric("Customers", f"{num_customers}")
-            col2.metric("Avg Income", f"{avg_income:.0f} Units")
+            col2.metric("Avg Income", f"{avg_income:.0f} units")
             col3.metric("Avg Age", f"{avg_age:.1f}")
-            col4.metric("Avg Spend", f"{avg_spend:.0f} Units")
+            col4.metric("Avg Spend", f"{avg_spend:.0f} units")
             col5.metric("Avg Recency", f"{avg_recency:.0f} days")
 
             st.markdown("---")  # horizontal line for separation
@@ -155,7 +157,7 @@ with tab1:
 # Tab2        
 with tab2:
     new_point_pca = preprocess_model.transform(input_df) # new data point for visualization
-    fig ,ax = plt.subplots() 
+    fig ,ax = plt.subplots(figsize = (6,4), dpi = 130) 
     if 'cluster_result' in locals(): # check if cluster_result exists or not
         # Get unique K-Means cluster IDs from non-outlier (inlier) points
         cluster_ids = sorted(data.loc[mask, 'K_Cluster'].unique())
@@ -179,7 +181,7 @@ with tab2:
         ax.set_xlabel("PCA1")
         ax.set_ylabel("PCA2")
         ax.legend(loc='upper left')
-        st.pyplot(fig)
+        st.pyplot(fig, use_container_width=False)
         
         # Define the cluster descriptions
         cluster_descriptions = {
@@ -214,5 +216,6 @@ with tab2:
             st.error("Invalid cluster result.")
     else:
         st.warning("Predict a cluster first using the Predict Cluster in Tab 1.")
+
 
 
