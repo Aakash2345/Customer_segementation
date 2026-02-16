@@ -174,14 +174,14 @@ with tab2:
         # Plotting new data point in same plot
         ax.scatter(
             new_point_pca[0, 0], new_point_pca[0, 1], 
-            color = 'red', marker = 'o', s = 200, 
+            color = 'red', marker = 'o', s = 150, 
             label = f'New customer (cluster {cluster_result})'
         )
         ax.set_title("K-Means Clusters with New Point")
         ax.set_xlabel("PCA1")
         ax.set_ylabel("PCA2")
         ax.legend(loc='upper left')
-        st.pyplot(fig, use_container_width=False)
+        st.pyplot(fig)
         
         # Define the cluster descriptions
         cluster_descriptions = {
@@ -216,6 +216,7 @@ with tab2:
             st.error("Invalid cluster result.")
     else:
         st.warning("Predict a cluster first using the Predict Cluster in Tab 1.")
+
 
 
 
